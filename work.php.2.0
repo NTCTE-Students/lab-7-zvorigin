@@ -1,0 +1,9 @@
+// Изменение куки
+setcookie("user", "guest", time() + 86400); // 1 день
+
+// Проверка изменения куки
+if(isset($_COOKIE["user"])) {
+    echo "Новое значение куки user: " . $_COOKIE["user"];
+} else {
+    echo "Кука user не установлена.";
+}

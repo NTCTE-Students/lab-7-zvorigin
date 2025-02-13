@@ -1,0 +1,9 @@
+// Установка куки
+setcookie("preferences", "dark_mode", time() + 604800); // 1 неделя
+
+// Проверка куки
+if(isset($_COOKIE["preferences"])) {
+    echo "Кука preferences установлена, значение: " . $_COOKIE["preferences"];
+} else {
+    echo "Кука preferences не установлена.";
+}

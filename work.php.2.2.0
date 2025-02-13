@@ -1,0 +1,15 @@
+session_start();
+
+// Форма
+if(isset($_POST['username']) && isset($_POST['password'])) {
+    $_SESSION['username'] = $_POST['username']; // Сохранение данных
+    header("Location: welcome.php"); // Перенаправление
+}
+?>
+<form method="post">
+    <input type="text" name="username" placeholder="Имя пользователя">
+    <input type="password" name="password" placeholder="Пароль">
+    <input type="submit" value="Войти">
+</form>
+<?php
+

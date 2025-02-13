@@ -1,0 +1,9 @@
+// Установка куки
+if(isset($_COOKIE["visited"])) {
+    setcookie("visited", $_COOKIE["visited"] + 1, time() + 86400); // увеличиваем значение
+} else {
+    setcookie("visited", 1, time() + 86400); // устанавливаем начальное значение
+}
+
+// Вывод значения куки
+echo "Вы посетили эту страницу " . $_COOKIE["visited"] . " раз.";

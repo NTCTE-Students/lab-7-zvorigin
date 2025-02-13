@@ -1,0 +1,7 @@
+// Удаление куки
+setcookie("session_id", "", time() - 3600); // Установка времени в прошлом
+
+// Проверка
+if(!isset($_COOKIE["session_id"])) {
+    echo "Кука session_id успешно удалена.";
+}

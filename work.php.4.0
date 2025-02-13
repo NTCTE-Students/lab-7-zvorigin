@@ -1,0 +1,9 @@
+// Установка куки
+setcookie("language", "English", time() + 7200); // 2 часа
+
+// Проверка куки
+if(isset($_COOKIE["language"])) {
+    echo "Кука language установлена, значение: " . $_COOKIE["language"];
+} else {
+    echo "Кука language не установлена.";
+}

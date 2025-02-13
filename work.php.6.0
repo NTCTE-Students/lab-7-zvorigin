@@ -1,0 +1,7 @@
+// Установка куки
+setcookie("country", "Russia", time() + 86400); // 1 день
+
+// Приветственное сообщение
+if(isset($_COOKIE["country"])) {
+    echo "Добро пожаловать из " . $_COOKIE["country"];
+}

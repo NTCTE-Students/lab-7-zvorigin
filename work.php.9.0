@@ -1,0 +1,5 @@
+// Проверка куки
+if(!isset($_COOKIE["loggedin"])) {
+    header("Location: login.php"); // Перенаправление на другую страницу
+    exit();
+}

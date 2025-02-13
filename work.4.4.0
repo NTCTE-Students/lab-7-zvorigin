@@ -1,0 +1,27 @@
+
+session_start();
+
+if(!isset($_SESSION['cart'])) {
+    $_SESSION['cart'] = [];
+}
+
+// Добавление товара
+if(isset($_POST['item'])) {
+    $_SESSION['cart'][] = $_POST['item'];
+}
+
+// Удаление товара
+if(isset($_POST['remove'])) {
+    unset($_SESSION['cart'][$_POST['remove']]);
+}
+
+// Вывод содержимого корзины
+echo "Содержимое корзины: ";
+foreach ($_SESSION['cart'] as $item) {
+    echo $item . "<br>";
+}
+?>
+<form method="post">
+    <input type="text" name="item" placeholder="Добавить товар">
+    <input type="submit" value="Добавить">
+</form>

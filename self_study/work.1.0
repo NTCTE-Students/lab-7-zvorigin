@@ -1,0 +1,9 @@
+// Установка куки
+setcookie("user", "admin", time() + 86400); // 1 день
+
+// Проверка куки
+if(isset($_COOKIE["user"])) {
+    echo "Кука user установлена, значение: " . $_COOKIE["user"];
+} else {
+    echo "Кука user не установлена.";
+}

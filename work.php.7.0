@@ -1,0 +1,17 @@
+// Установка куки
+if(isset($_POST['theme'])) {
+    setcookie("theme", $_POST['theme'], time() + 86400); // 1 день
+}
+
+// Форма
+?>
+<form method="post">
+    <input type="text" name="theme" placeholder="Введите тему (light/dark)">
+    <input type="submit" value="Сохранить">
+</form>
+<?php
+
+// Вывод значения
+if(isset($_COOKIE["theme"])) {
+    echo "Текущая тема: " . $_COOKIE["theme"];
+}
